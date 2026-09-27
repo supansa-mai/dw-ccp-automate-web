@@ -1,0 +1,26 @@
+{
+  "name": "dw-ccp-automate-web",
+  "version": "1.0.0",
+  "description": "Playwright E2E automation for DW CCP web",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:staging": "ENV=staging playwright test",
+    "test:prod": "ENV=production playwright test",
+    "test:local": "ENV=local playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:api": "playwright test tests/api",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3"
+  }
+}
