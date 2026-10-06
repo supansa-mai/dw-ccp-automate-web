@@ -1,5 +1,5 @@
 import { test as base } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage.js';
+import { LoginPage } from '../pages/login.page.js';
 
 /**
  * Custom fixtures — extend Playwright's base test with page objects
@@ -12,7 +12,9 @@ export const test = base.extend({
     const loginPage = new LoginPage(page);
     await use(loginPage);
   },
-
+  profilePage: async ({ page }, use) => {
+    await use(new ProfilePage(page));
+  }
   // Add more page fixtures here as you create new Page Objects
   // dashboardPage: async ({ page }, use) => {
   //   const dashboardPage = new DashboardPage(page);

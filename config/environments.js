@@ -5,14 +5,14 @@
  */
 
 const environments = {
-  staging: {
-    baseURL: 'https://staging.example.com',
-    apiURL: 'https://api.staging.example.com',
+  uat: {
+    baseURL: 'https://uat.fc-creator.datawow.io/th',
+    apiURL: 'https://api-uat.fc-creator.datawow.io/v1',
     timeout: 30000,
   },
-  production: {
-    baseURL: 'https://www.example.com',
-    apiURL: 'https://api.example.com',
+  sit: {
+    baseURL: 'https://sit.fc-creator.datawow.io/th',
+    apiURL: 'https://api-sit.fc-creator.datawow.io/v1',
     timeout: 60000,
   },
   local: {
@@ -22,7 +22,7 @@ const environments = {
   },
 };
 
-const currentEnv = process.env.ENV || 'staging';
+const currentEnv = process.env.ENV || 'uat';
 
 if (!environments[currentEnv]) {
   throw new Error(`Unknown environment: "${currentEnv}". Valid options: ${Object.keys(environments).join(', ')}`);
