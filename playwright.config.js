@@ -35,7 +35,7 @@ export default defineConfig({
 
   /* Shared settings for all projects */
   use: {
-    baseURL: env.baseURL,
+    baseURL: `${env.baseURL}/`,
 
     /* Collect trace when retrying the failed test */
     trace: 'on-first-retry',

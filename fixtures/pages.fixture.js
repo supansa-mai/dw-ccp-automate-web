@@ -12,9 +12,6 @@ export const test = base.extend({
     const loginPage = new LoginPage(page);
     await use(loginPage);
   },
-  profilePage: async ({ page }, use) => {
-    await use(new ProfilePage(page));
-  }
   // Add more page fixtures here as you create new Page Objects
   // dashboardPage: async ({ page }, use) => {
   //   const dashboardPage = new DashboardPage(page);
